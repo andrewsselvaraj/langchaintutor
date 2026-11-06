@@ -1,18 +1,21 @@
-# LangChain Tutor
+# LangChain Tutor (Java)
 
-A simple LangChain program that asks an LLM "What is Kubernetes?" and prints the answer.
+A simple standalone Java program, built with [LangChain4j](https://docs.langchain4j.dev),
+that asks an LLM "What is Kubernetes?" and prints the answer.
+
+## Requirements
+
+- Java 17 or newer
+- Maven
+- An Anthropic API key
 
 ## Run it (Windows)
 
 ```
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-copy .env.example .env
+set ANTHROPIC_API_KEY=your-api-key-here
+mvn package
+java -jar target\langchaintutor.jar
 ```
 
-Edit `.env` and put in your Anthropic API key, then run:
-
-```
-python main.py
-```
+`mvn package` builds a single runnable jar (`target\langchaintutor.jar`) with everything inside,
+so after that you only need `java -jar` to run it.
