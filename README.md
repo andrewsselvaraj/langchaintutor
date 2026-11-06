@@ -7,12 +7,12 @@ that asks an LLM "What is Kubernetes?" and prints the answer.
 
 - Java 17 or newer
 - Maven
-- An Anthropic API key
+- An OpenAI API key
 
 ## Run it (Windows)
 
 ```
-set ANTHROPIC_API_KEY=your-api-key-here
+set OPENAI_API_KEY=your-api-key-here
 mvn package
 java -jar target\langchaintutor.jar
 ```
